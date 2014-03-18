@@ -6,28 +6,30 @@ import org.junit.Test;
 
 public class PricingTest {
     @Test
-    public void shouldGetPriceForSimpleProduct(){
+    public void shouldGetPriceForSimpleProduct() {
 
-        ShoppingCard card=new ShoppingCard();
-        card.add(new Product(ProductType.SIMPLE,125));
-        Assert.assertEquals(125.0, PriceStrategy.calculatePrice(card),0);
+        ShoppingCard card = new ShoppingCard();
+        card.add(ProductName.Table, 1.0);
+        card.add(ProductName.Table, 1.0);
+
+        Assert.assertEquals(701, PriceStrategy.calculatePrice(card), 0);
     }
 
     @Test
-    public void shouldCalculateCorretPriceForSimpleProducts(){
+    public void shouldCalculateCorretPriceForSimpleProducts() {
         ShoppingCard card=new ShoppingCard();
-        card.add(new Product(ProductType.SIMPLE,125));
-        card.add(new Product(ProductType.SIMPLE,129.89));
-        card.add(new Product(ProductType.SIMPLE,235.89));
-        card.add(new Product(ProductType.SIMPLE,1.05));
-        card.add(new Product(ProductType.SIMPLE,0.99));
+        card.add(ProductName.Table, 1.0);
+        card.add(ProductName.Chair, 2.0);
+        card.add(ProductName.Monitor, 3.0);
+        card.add(ProductName.Mouse, 1.0);
 
-        Assert.assertEquals(492.82, PriceStrategy.calculatePrice(card),0);
+
+        Assert.assertEquals(4536.3, PriceStrategy.calculatePrice(card),0);
     }
 
     @Test
-    public void shouldBeZeroPriceWhenNoProductsInTheStock(){
-        ShoppingCard card=new ShoppingCard();
-        Assert.assertEquals(0, PriceStrategy.calculatePrice(card),0);
+    public void shouldBeZeroPriceWhenNoProductsInTheStock() {
+        ShoppingCard card = new ShoppingCard();
+        Assert.assertEquals(0, PriceStrategy.calculatePrice(card), 0);
     }
 }

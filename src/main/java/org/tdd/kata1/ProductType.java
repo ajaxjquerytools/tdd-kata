@@ -7,5 +7,6 @@ public enum ProductType {
     SIMPLE,
     THREE_FOR_A_DOLLAR,
     POUND,
+    BUY_TWO_GET_ONE
 
 }
