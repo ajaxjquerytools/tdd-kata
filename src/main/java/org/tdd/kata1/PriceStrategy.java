@@ -1,5 +1,7 @@
 package org.tdd.kata1;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by dvornykv on 3/12/14.
  */
@@ -27,7 +29,8 @@ public class PriceStrategy {
             }
 
         }
-        return sum;
+        DecimalFormat threeDForm = new DecimalFormat("#.###");
+        return Double.valueOf(threeDForm.format(sum));
     }
 
     public static double calcSimple(double price, double count) {
