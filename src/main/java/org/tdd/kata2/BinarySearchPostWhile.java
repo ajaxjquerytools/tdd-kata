@@ -20,10 +20,7 @@ public class BinarySearchPostWhile implements BinarySearch {
             } else {
                 firstIndx = midleIndx + 1;
             }
-
         } while (lastIndx >= firstIndx);
-
         return -1;
     }
-
 }

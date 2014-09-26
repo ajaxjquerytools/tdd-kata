@@ -13,12 +13,20 @@ public class TestBinarySearch {
     }
 
     @Test
-    public void shoulTestImpl2(){
+    public void shouldTestImpl2(){
         abstractTest(new BinarySearchPostWhile());
     }
     @Test
-    public void shoulTestImpl3(){
+    public void shouldTestImpl3(){
         abstractTest(new BinarySearchRecursive());
+    }
+    @Test
+    public void shouldTestImpl4(){
+        abstractTest(new BinarySeachShortCode());
+    }
+    @Test
+    public void shouldTestImpl5(){
+        abstractTest(new BinarySearchIterFor());
     }
     
     public void abstractTest(BinarySearch finder){

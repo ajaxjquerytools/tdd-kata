@@ -13,13 +13,12 @@ public class BinarySearchRecursive implements BinarySearch {
 
     private int chop(int value, int firstIx, int lastIx, int[] array) {
         int midleIndx;
-
         if (lastIx >= firstIx) {
             midleIndx = (firstIx + lastIx) / 2;
             if (value == array[midleIndx]) return midleIndx;
-            if (value < array[midleIndx]) return chop(value, firstIx, midleIndx - 1, array);
-            if (value > array[midleIndx]) return chop(value, midleIndx + 1, lastIx, array);
+            if (value < array[midleIndx]) return chop(value, firstIx, --midleIndx , array);
+            if (value > array[midleIndx]) return chop(value, ++midleIndx, lastIx, array);
         }
         return -1;
-    };
+    }
 }
