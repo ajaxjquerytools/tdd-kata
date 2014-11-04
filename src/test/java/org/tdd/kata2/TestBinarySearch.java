@@ -22,7 +22,7 @@ public class TestBinarySearch {
     }
     @Test
     public void shouldTestImpl4(){
-        abstractTest(new BinarySeachShortCode());
+        abstractTest(new BinarySearchShortCode());
     }
     @Test
     public void shouldTestImpl5(){

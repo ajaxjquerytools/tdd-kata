@@ -3,7 +3,7 @@ package org.tdd.kata2;
 /**
  * Created by vx00418 on 9/25/14.
  */
-public class BinarySeachShortCode implements BinarySearch {
+public class BinarySearchShortCode implements BinarySearch {
     @Override
     public int chop(int v, int[] arr) {
         int fI = 0, lX = arr.length - 1, mI;
