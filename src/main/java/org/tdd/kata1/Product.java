@@ -15,6 +15,10 @@ public class Product implements IProduct {
         System.out.println("master commit 1");
         System.out.println("master commit 2");
         System.out.println("master commit 3");
+
+        System.out.println("master COMMIT 1");
+        System.out.println("master COMMIT 2");
+        System.out.println("master COMMIT 3");
     }
 
     public ProductType getType() {
