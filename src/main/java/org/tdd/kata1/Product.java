@@ -12,13 +12,10 @@ public class Product implements IProduct {
         this.name=name;
         this.type = type;
         this.price = price;
-        System.out.println("master commit 1");
-        System.out.println("master commit 2");
-        System.out.println("master commit 3");
-
-        System.out.println("master COMMIT 1");
-        System.out.println("master COMMIT 2");
-        System.out.println("master COMMIT 3");
+        System.out.println("This is rebase test 1");
+        System.out.println("This is rebase test 2");
+        System.out.println("This is rebase test 3");
+        System.out.println("This is rebase test 4");
     }
 
     public ProductType getType() {
