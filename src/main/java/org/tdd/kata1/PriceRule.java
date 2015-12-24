@@ -5,4 +5,7 @@ package org.tdd.kata1;
  */
 public class PriceRule {
 
+    static {
+        System.out.println("This is static block");
+    }
 }
