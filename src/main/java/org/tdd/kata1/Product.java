@@ -12,6 +12,9 @@ public class Product implements IProduct {
         this.name=name;
         this.type = type;
         this.price = price;
+        System.out.println("master commit 1");
+        System.out.println("master commit 2");
+        System.out.println("master commit 3");
     }
 
     public ProductType getType() {
